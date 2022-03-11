@@ -14,6 +14,8 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+set(DOWNLOAD_CACHE "${CMAKE_CURRENT_BINARY_DIR}/downloads/")
+
 # Sometimes we want to find programs, sometimes other files.
 function(find_unknown VARIABLE_NAME EXTENSION EXECUTABLE_NAME HINTS)
     if(${EXTENSION} MATCHES "exe")
