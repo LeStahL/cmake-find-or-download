@@ -51,7 +51,7 @@ function(find_or_download_if_not_present VARIABLE_NAME EXECUTABLE_NAME URL PATH_
         message(STATUS "Did not find ${VARIABLE_NAME} in cache. Will download from ${URL}.")
         file(DOWNLOAD ${URL} ${FULL_DOWNLOAD_PATH} SHOW_PROGRESS)
     else()
-        message(STATUS "Found ${VARIABLE_NAME} in cache. Will reuse.")
+        message(STATUS "Found ${VARIABLE_NAME} in cache: `${${VARIABLE_NAME}_DOWNLOAD}`. Will reuse.")
     endif()
 
     # If download is zipped: unzip it.
